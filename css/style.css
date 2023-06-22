@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+  url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* GLOBAL */
 
 html{
@@ -17,22 +27,27 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
+  font-family:"Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 16px;
-  line-height: 150%;
-  background-color: #fff;
-  color: #222;
+  font-size: 15px;
+  line-height: 28px;
+  background-image: url(../img/pricing-component-bgi-right.svg),
+  url(../img/pricing-component-bgi-left.svg);
+  background-repeat: no-repeat;
+  background-position: right -100px top -100px,
+  left -120px  bottom -457px;
+  background-color: #f7f7fe;
+  color: #6e728e;
 }
 
 
 /* CONTAINER */
 .container{
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1090px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -41,4 +56,149 @@ body{
 /* MAIN CONTENT */
 .main-content{
   flex-grow: 1;
+}
+
+.page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.pricing-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.page-top {
+  padding-bottom: 65px;
+}
+.page-top-title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 39px;
+}
+.pricing {
+  width: 100%;
+}
+
+.pricing-inner {
+  display: flex;
+  align-items: center;
+}
+.pricing-plan{
+  display: inline-block;
+  height: min-content;
+  padding: 31px;
+  flex-grow: 1;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.pricing-plan-best {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background: linear-gradient(
+  135.06deg,
+  #A2A7F0 -0.05%,
+  #696edd 100.05%
+  );
+  color: #fff;
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+  border-radius: 10px;
+}
+
+.pricing-plan-heading {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+}
+.pricing-plan-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+  line-height: 71px;
+  letter-spacing: -2.16px;
+  margin-bottom: 32px;
+
+}
+.pricing-plan-currency {
+  margin-right: 8px;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+}
+.pricing-plan-features-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 32px;
+}
+.pricing-plan-feature {
+  border-top: 1px solid rgba(110, 114, 142, 0.25);
+  padding: 12px;
+  text-align: center;
+}
+.pricing-plan-feature:last-child{
+  border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+}
+
+.pricing-plan-best .pricing-plan-feature {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.pricing-plan-best .pricing-plan-feature:last-child{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 288px;
+  padding: 12px 66px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: 1px solid #696edd;
+  transition: background-color 0.4s ease,
+    color 0.4s ease;
+}
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-primary{
+  background-image: linear-gradient(
+  135deg,
+  #A2A7F0 0%,
+  #696edd 100%
+  );
+  color: #fff;
+}
+
+.button-primary:hover{
+  border: 1px solid #696edd;
+  background-image: none;
+  background-color: #fff;
+  color: #696edd;
+}
+
+.button-white {
+  background: #fff;
+  color: #696edd;
+}
+
+.button-white:hover{
+  border: 1px solid #fff;
+  background: #696edd;
+  color: #fff;
 }
